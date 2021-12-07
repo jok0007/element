@@ -1,0 +1,211 @@
+@font-face {
+  font-family: Montserrat-Regular;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Awesome Font"), url(../fonts/Montserrat-Regular.woff2) format("woff2"), url(../fonts/Montserrat-Regular.woff) format("woff"), url(../fonts/Montserrat-Regular.ttf) format("ttf");
+}
+
+@font-face {
+  font-family: Montserrat-Medium;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local("Awesome Font"), url(../fonts/Montserrat-Medium.woff2) format("woff2"), url(../fonts/Montserrat-Medium.woff) format("woff"), url(../fonts/Montserrat-Medium.ttf) format("ttf");
+}
+
+@font-face {
+  font-family: Montserrat-ExtraBold;
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local("Awesome Font"), url(../fonts/Montserrat-ExtraBold.woff2) format("woff2"), url(../fonts/Montserrat-ExtraBold.woff) format("woff"), url(../fonts/Montserrat-ExtraBold.ttf) format("ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-style: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  letter-spacing: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: inherit;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.wrapper {
+  min-height: 100%;
+  min-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: -webkit-gradient(linear, left top, left bottom, from(#282b30), to(#16171b));
+  background: -o-linear-gradient(top, #282b30 0%, #16171b 100%);
+  background: linear-gradient(180deg, #282b30 0%, #16171b 100%);
+}
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+body .lock {
+  overflow: hidden;
+}
+
+.header {
+  padding: 20px 0px 0px 0px;
+  min-height: 550px;
+  background: url("../img/header/img/header-mobile.jpg") 0 0 no-repeat;
+}
+
+.header__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__burger-icon {
+  width: 44px;
+  height: 26px;
+  position: relative;
+}
+
+.header__burger-icon span {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.header__burger-icon::before,
+.header__burger-icon::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  left: 0;
+  position: absolute;
+}
+
+.header__burger-icon::before {
+  top: 0;
+}
+
+.header__burger-icon::after {
+  bottom: 0;
+}
+
+.header__burger-icon.active span {
+  display: none;
+}
+
+.header__burger-icon.active::before {
+  top: 50%;
+  -webkit-transform: rotate(-45deg) translate(0, -50%);
+      -ms-transform: rotate(-45deg) translate(0, -50%);
+          transform: rotate(-45deg) translate(0, -50%);
+}
+
+.header__burger-icon.active::after {
+  bottom: 50%;
+  -webkit-transform: rotate(45deg) translate(0, 50%);
+      -ms-transform: rotate(45deg) translate(0, 50%);
+          transform: rotate(45deg) translate(0, 50%);
+}
+@supports (-webkit-appearance:none){
+.header{background:url("../img/header/img/header-mobile.webp") 0 0 no-repeat}
+}
